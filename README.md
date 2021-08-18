@@ -1,3 +1,13 @@
+TLDR:
+1. install python3, pip , then you need to install `pip install imageio` and `pip install pillow`
+2. clone the repo to local
+3. cd <project_root>/prepare, run `python download-mnist-data.py`
+4. cd <project_root>/basic, run `./build.sh`
+5. run `time ./cpu_run.sh` to train the model using cpu and get the total training time
+6. run `time ./gpu_run.sh` to train the model using gpu and get the total training time
+7. if you want to check the gpu power and temperature run `watch -n 2 nvidia-smi` in another tty during the training
+
+
 # mnist-learning-docker
 
 Learning MNIST using TensorFlow in a Docker container
