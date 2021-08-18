@@ -8,7 +8,8 @@ echo "Granting root user access to X display"
 xhost +si:localuser:root
 
 echo "Running Docker image: ${docker_image_id}"
-nvidia-docker run -it --rm \
+docker run -it --rm \
+    --gpus all \
     --name ${docker_image_name} \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
     --env="DISPLAY" \

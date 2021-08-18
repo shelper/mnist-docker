@@ -1,19 +1,21 @@
 import argparse
 import os
-import scipy.misc
+from PIL import Image
+import imageio
 
 import mnist
 
 
 def save(subset, images, labels, out_dir):
     for i in range(images.shape[0]):
-        image = scipy.misc.toimage(images[i, :, :] * -1 + 256)
+        # image = scipy.misc.toimage(images[i, :, :] * -1 + 256)
+        image = Image.fromarray(images[i, :, :] * -1 + 256)
         label = labels[i]
 
         dir_name = "{}/{}/{}".format(out_dir, subset, label)
         os.makedirs(dir_name, exist_ok=True)
 
-        scipy.misc.imsave("{}/{}.png".format(dir_name, i),
+        imageio.imwrite("{}/{}.png".format(dir_name, i),
                           image)
 
 

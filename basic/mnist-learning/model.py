@@ -1,6 +1,6 @@
-from keras.models import Sequential
-from keras.layers import Conv2D
-from keras.layers import Activation, Dropout, Flatten, Dense
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D
+from tensorflow.keras.layers import Activation, Dropout, Flatten, Dense
 
 def get_model(simple=True):
     model = Sequential()

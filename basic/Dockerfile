@@ -1,6 +1,8 @@
-FROM gcr.io/tensorflow/tensorflow:latest-gpu-py3
+FROM tensorflow/tensorflow:latest-gpu-py3
 
-MAINTAINER Erik Jan de Vries (github.com/erikjandevries)
+MAINTAINER Zhijia Yuan (mpnv38@zebra.com)
+ENV DEBIAN_FRONTEND=nonintercative
+
 
 RUN apt-get update && \
     apt-get install -y \
@@ -11,6 +13,7 @@ RUN apt-get update && \
 RUN pip install --upgrade \
         pip \
         keras
+RUN pip install pillow
 
 COPY mnist-learning /repositories/mnist-learning
 

@@ -48,6 +48,7 @@ def download_file(fname, target_dir=None, force=False):
     if not target_dir:
         target_dir = tempfile.gettempdir()
     target_fname = os.path.join(target_dir, fname)
+    print(target_fname)
 
     if force or not os.path.isfile(target_fname):
         url = urljoin(datasets_url, fname)
