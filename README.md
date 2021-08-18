@@ -1,3 +1,5 @@
+This repo is modified based on https://github.com/erikjandevries/mnist-learning-docker.
+
 TLDR:
 1. install python3, pip , then you need to install `pip install imageio` and `pip install pillow`
 2. clone the repo to local
