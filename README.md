@@ -1,6 +1,7 @@
 This repo is modified based on https://github.com/erikjandevries/mnist-learning-docker.
 
 TLDR:
+If you don't have nvidia-docker2 installed you need to have that first, refer to https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html for more details, then all you need to do is as following:
 1. install python3, pip , then you need to install `pip install imageio` and `pip install pillow`
 2. clone the repo to local
 3. cd <project_root>/prepare, run `python download-mnist-data.py`
